@@ -1,0 +1,15 @@
+.App {
+  background: white;
+  text-align: center;
+  width:100%;
+  
+  &__container {
+    border:1px solid black;
+    max-width: 900px;
+    min-width: 260px;
+    margin:4rem auto;
+    width:50%; 
+    background:white;   
+  }
+}
+
