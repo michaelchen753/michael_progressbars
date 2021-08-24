@@ -45,7 +45,7 @@ const ProgressBarWidget = () => {
   }, []);
   
   
-  const handleProgressBarSelectedChange = useCallback((progressBarId) => {
+  const handleProgressBarSelectedChange = (progressBarId) => {
     const updatedProgressBarListData = progressBarListData?.map(item => {
       return ({
         ...item,
@@ -53,9 +53,9 @@ const ProgressBarWidget = () => {
       });
     });
     setProgressBarListData(updatedProgressBarListData);
-  },[progressBarListData]);
+  };
   
-  const handleMaintainButtonClick = useCallback((maintainValue) => {
+  const handleMaintainButtonClick = (maintainValue) => {
     const updatedProgressBarListData = progressBarListData?.map(item => {
       let updatedCompleted = parseInt(item.completed) + parseInt(maintainValue);
       if(updatedCompleted > data.limit) {
@@ -71,7 +71,7 @@ const ProgressBarWidget = () => {
       });
     });
     setProgressBarListData(updatedProgressBarListData);
-  },[progressBarListData]);
+  };
   
   
   if(error) {
