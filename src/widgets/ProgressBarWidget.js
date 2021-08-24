@@ -1,6 +1,7 @@
 import React, {
   useEffect,
-  useState
+  useState,
+  useCallback
 } from 'react';
 import ProgressBarList from '../components/ProgressBarList/ProgressBarList';
 import DropDownMenu from '../components/DropDownMenu/DropDownMenu';
@@ -44,7 +45,7 @@ const ProgressBarWidget = () => {
   }, []);
   
   
-  const handleProgressBarSelectedChange = (progressBarId) => {
+  const handleProgressBarSelectedChange = useCallback((progressBarId) => {
     const updatedProgressBarListData = progressBarListData?.map(item => {
       return ({
         ...item,
@@ -52,9 +53,9 @@ const ProgressBarWidget = () => {
       });
     });
     setProgressBarListData(updatedProgressBarListData);
-  };
+  },[progressBarListData]);
   
-  const handleMaintainButtonClick = (maintainValue) => {
+  const handleMaintainButtonClick = useCallback((maintainValue) => {
     const updatedProgressBarListData = progressBarListData?.map(item => {
       let updatedCompleted = parseInt(item.completed) + parseInt(maintainValue);
       if(updatedCompleted > data.limit) {
@@ -70,7 +71,7 @@ const ProgressBarWidget = () => {
       });
     });
     setProgressBarListData(updatedProgressBarListData);
-  };
+  },[progressBarListData]);
   
   
   if(error) {
