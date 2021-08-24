@@ -16,4 +16,4 @@ const Buttons = ({
     </div>
 );
 
-export default React.memo(Buttons);
+export default Buttons;

@@ -7,11 +7,11 @@ const ProgressBarList = ({
   return (
     <div className='barlist'>
             {data?.map((item, index) => (
-                <li key={index}><ProgressBar props={item} /></li>
+                <li key={`${item.completed}_${index}`}><ProgressBar props={item} /></li>
               ))
             }
         </div>
   );
 };
 
-export default React.memo(ProgressBarList);
+export default ProgressBarList;

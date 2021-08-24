@@ -21,11 +21,11 @@ const FillerStyles = styled.div`
     `;
 
 const LableStyles = styled.div`
-        color:black;
-        text-align:center;
+        color: black;
+        text-align: center;
         position: absolute;
-        top:15%;
-        left:45%;
+        top: 15%;
+        left: 45%;
         z-index: 3;
         font-size: 18px;
         font-family: 'STIX Two Text', serif;
