@@ -7,9 +7,7 @@ const ProgressBarList = ({
   return (
     <div className='barlist'>
             {data?.map((item, index) => (
-                <ul key={`${item.completed}_${index}`}>
-                    <li key={ index }><ProgressBar item={ item } /></li>
-                </ul>
+                <li key={index}><ProgressBar props={item} /></li>
               ))
             }
         </div>

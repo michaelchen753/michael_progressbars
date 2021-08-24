@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import axiosMock from 'axios';
 import {
   fireEvent,
@@ -35,7 +34,8 @@ describe('App should render correctly', () => {
         .mockImplementation(() => {
           return Promise.resolve(mockData);
         });
-      
+
+
       render(< App / >);
       
       await waitFor(() => {
