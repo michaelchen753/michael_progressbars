@@ -4,14 +4,12 @@ import {
   fireEvent,
   render,
   screen,
-  waitFor,
+  waitFor
 } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import App from './App';
 
 
 jest.mock('axios');
-axiosMock.create = jest.fn(() => axiosMock);
 
 describe('App should render correctly', () => {
   describe('App component', () => {
@@ -107,3 +105,5 @@ describe('App should render correctly', () => {
     
   });
 });
+
+
