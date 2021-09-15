@@ -1,13 +1,13 @@
-.buttons{
-    margin-left: 0;
-    width:70%;
-    display: flex;
-    background-color: lightgray(238, 235, 235);
+.buttons {
+  margin-left: 0;
+  width: 70%;
+  display: flex;
+  background-color: lightgray(238, 235, 235);
 
-   button{
-        font-size: 13px;
-        padding: 0px 5px;
-        margin-left:.4rem;
-        cursor: pointer;    
-    } 
+  button {
+    font-size: 13px;
+    padding: 0px 5px;
+    margin-left: 0.4rem;
+    cursor: pointer;
+  }
 }
